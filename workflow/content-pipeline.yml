@@ -1,0 +1,38 @@
+name: automation-empire-content-pipeline
+version: 1
+brand: Automation Empire
+presenter:
+  face: creator_recorded
+  voice: creator_recorded
+  synthetic_presenter: false
+  voice_cloning: false
+format:
+  primary: youtube_short
+  target_seconds: 27
+  aspect_ratio: '9:16'
+  resolution: '1080x1920'
+  visual_identity:
+    palette: [deep_blue, gold]
+    captions: high_contrast_mobile_safe
+stages:
+  - idea
+  - source_research
+  - script_draft
+  - creator_script_approval
+  - on_camera_recording
+  - edit_and_captions
+  - quality_review
+  - creator_publish_approval
+  - upload
+  - publication_verification
+  - analytics_review
+rules:
+  publish_requires_explicit_approval: true
+  spend_requires_explicit_approval: true
+  preserve_original_recording: true
+  disclose_unverified_claims: true
+  no_secrets_in_git: true
+  no_private_or_unauthorized_data: true
+blocked_integrations:
+  youtube_api: quota_exceeded_and_forbidden_read_test
+  video_source_asset: not_provided_to_this_run
